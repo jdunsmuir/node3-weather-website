@@ -15,7 +15,7 @@ const forecast = (
     } else if (body.error) {
       callback('Unable to find location.', undefined);
     } else {
-      let callbackMessage = "It is currently " + body.current['temperature'] + ". It feels like " + body.current['feelslike'] + " degrees out."
+      let callbackMessage = "It is currently " + body.current['temperature'] + ". It feels like " + body.current['feelslike'] + " degrees out." + `The humidity is ${body.humidity}`;
       callback(undefined, callbackMessage);
     }
   })
